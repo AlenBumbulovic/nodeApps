@@ -1,0 +1,19 @@
+{{#if blogentries}}
+    {{#each blogentries}}
+        <div class="row medium-8 large-7 columns">
+        <div class="blog-post">
+            <h3>{{title}}<small>{{blogentries.id}}</small></h3>
+            <img class="thumbnail" style="width: 300px;" src="/images/portfolio/{{image}}">
+            <p>{{description}}</p>
+            <div class="callout">
+                <ul class="menu simple">
+                    <li><a href="#">{{author}}</a></li>
+                    <li><a href="#">{{entryDate}}</a></li>
+                </ul>
+            </div>
+            <span>
+            <a href="/comment/{{id}}" class="button success">Add comment</a>
+        </span>
+    {{/each}}
+{{/if}}
+    <br>

@@ -1,0 +1,23 @@
+<!-- We can now combine rows and columns when there's only one column in that row -->
+{{#if blogentries}}
+    {{#each blogentries}}
+<div class="row medium-8 large-7 columns">
+    <div class="blog-post">
+        <h3>{{etitle}} <small></small></h3>
+        <br>
+        <h5><a href="categories/{{eblogCategory_id}}"> Category: {{ccategory}}</a></h5>
+        <img class="thumbnail" style="width: 300px;" src="/images/portfolio/{{eimage}}">
+        <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{edescription}}</p>
+        <div class="callout">
+            <ul class="menu simple">
+                <li><a href="#">{{eauthor}}</a></li>
+                <li><a href="#">{{eentryDate}}</a></li>
+            </ul>
+        </div>
+            <a href="view_comments/{{id}}" class="button default">Read more</a>
+        </span>
+    </div>
+</div>
+<hr>
+    {{/each}}
+{{/if}}

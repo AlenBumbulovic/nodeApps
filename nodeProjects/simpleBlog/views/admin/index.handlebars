@@ -1,0 +1,28 @@
+<!-- We can now combine rows and columns when there's only one column in that row -->
+{{#if blogentries}}
+{{#each blogentries}}
+<div class="row medium-8 large-7 columns">
+    <div class="blog-post">
+        <h3>{{title}} <small></small></h3>
+        <br>
+        <h5>Category: {{category}}</h5>
+        <img class="thumbnail" style="width: 200px;" src="/images/portfolio/{{image}}">
+        <p>{{description}}</p>
+        <div class="callout">
+            <ul class="menu simple">
+                <li><a href="#">Author: {{author}}</a></li>
+                <li><a href="#"> Date: {{entryDate}}</a></li>
+            </ul>
+        </div>
+        <span>
+            <a href="/admin/create_post/" class="button success">Add post</a>
+            <a href="/admin/edit_post/{{id}}" class="button default">Edit post</a>
+            <a href="/admin/delete/{{id}}" data-id="{{id}}" class="button alert delete-project">Delete Post</a>
+        </span>
+    </div>
+</div>
+<hr>
+    {{/each}}
+{{else}}
+    NO ENTRIES
+{{/if}}

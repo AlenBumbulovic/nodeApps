@@ -1,0 +1,11 @@
+{
+    "name": "clientkeeper",
+    "version": "1.0.0",
+    "description": "Client managment app",
+    "dependencies": {
+        "express": "*",
+        "body-parser": "*",
+        "mongojs": "*"
+    },
+    "author": "Alen"
+}

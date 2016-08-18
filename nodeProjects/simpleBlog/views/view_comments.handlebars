@@ -1,0 +1,32 @@
+<!-- We can now combine rows and columns when there's only one column in that row -->
+    {{#if blogentry}}
+        {{#each blogentry}}
+        <div class="row medium-8 large-7 columns">
+            <div class="blog-post">
+                <h3>{{title}}<small>{{blogentry.id}}</small></h3>
+                <img class="thumbnail" style="width: 300px;" src="/images/portfolio/{{image}}">
+                <p>{{description}}</p>
+                <div class="callout">
+                    <ul class="menu simple">
+                        <li><a href="#">{{author}}</a></li>
+                        <li><a href="#">{{entryDate}}</a></li>
+                    </ul>
+                </div>
+            <span>
+            <a href="/comment/{{id}}" class="button success">Add comment</a>
+        </span>
+        {{/each}}
+    {{/if}}
+    <br>
+    <h4>Comments: </h4>
+                {{#each comments}}
+                    <div class="callout">
+                        <ul>
+                            <li><p>Author: {{comment_author}}</p></li>
+                            <li><p>Comment: {{comment}}</p></li>
+                        </ul>
+                    </div>
+                {{/each}}
+
+            </div>
+        </div>
